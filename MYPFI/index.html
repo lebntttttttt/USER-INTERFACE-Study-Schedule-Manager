@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Schedule Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <h1 class="title">Study Schedule Manager</h1>
+    <p class="subtitle">Organize your study sessions effectively</p>
+
+    <!-- TOP STATS -->
+    <div class="stats">
+        <div class="stat-card">
+            <div class="icon icon-blue">📘</div>
+            <p class="stat-title">Total Sessions</p>
+            <h2 class="stat-value">2</h2>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon icon-green">📅</div>
+            <p class="stat-title">This Week</p>
+            <h2 class="stat-value">1</h2>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon icon-purple">⏱</div>
+            <p class="stat-title">Hours Planned</p>
+            <h2 class="stat-value">3.5</h2>
+        </div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+        <button class="btn add-session">＋ Add Study Session</button>
+        <button class="btn view-schedule">📅 View Schedule</button>
+    </div>
+
+    <h2 class="section-heading">Upcoming Sessions</h2>
+
+    <!-- SESSION CARD -->
+    <div class="session-card">
+        <div>
+            <div class="session-header">
+                <span class="dot"></span>
+                <h3 class="session-title">Database Systems</h3>
+                <span class="tag">medium</span>
+            </div>
+
+            <p class="topic">SQL Queries</p>
+
+            <div class="session-details">
+                <span>📆 Sun, Nov 16</span>
+                <span>⏰ 10:00 • 1.5 hours</span>
+            </div>
+        </div>
+
+        <span class="delete">🗑</span>
+    </div>
+
+</div> <!-- END WRAPPER -->
+
+<!-- REAL FORM MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h3>Add Study Session</h3>
+
+        <form id="sessionForm">
+            <label>Subject</label>
+            <input type="text" id="subject" required>
+
+            <label>Topic</label>
+            <input type="text" id="topic" required>
+
+            <label>Date</label>
+            <input type="date" id="date" required>
+
+            <label>Time</label>
+            <input type="time" id="time" required>
+
+            <label>Duration (hours)</label>
+            <input type="number" id="duration" min="0.5" step="0.5" required>
+
+            <label>Priority</label>
+            <select id="priority" required>
+                <option value="low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">high</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Add Session</button>
+        </form>
+
+        <button id="closeModal" class="close-btn">Close</button>
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
